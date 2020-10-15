@@ -17,11 +17,11 @@ func Listen() {
 		tcpListener *net.TCPListener
 	)
 
-	tcpAddr, _ = net.ResolveTCPAddr("tcp", "127.0.0.1:"+config.Conf.Common.HTTPPort)
+	tcpAddr, _ = net.ResolveTCPAddr("tcp", "127.0.0.1:"+config.Conf.Common.TcpPort)
 	tcpListener, _ = net.ListenTCP("tcp", tcpAddr)
 	defer tcpListener.Close()
 
-	logger.Info("Server ready to conn, Listening on " + config.Conf.Common.HTTPPort)
+	logger.Info("Server ready to conn, Listening on " + config.Conf.Common.TcpPort)
 
 	for {
 		tcpConn, err := tcpListener.AcceptTCP()

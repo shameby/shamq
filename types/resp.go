@@ -16,16 +16,6 @@ func SuccessResp(data string) *StandardResp {
 	}
 }
 
-func (s StandardResp) ToString() string {
-	var (
-		b []byte
-	)
-
-	b, _ = json.Marshal(s)
-
-	return string(b) + "\n"
-}
-
 func (s StandardResp) ToByte() []byte {
 	var (
 		b []byte
