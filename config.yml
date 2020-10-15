@@ -1,0 +1,3 @@
+common:
+  logPath: /Users/randy/shamq_log/
+  httpPort: 8080
