@@ -16,10 +16,10 @@ type Config = struct {
 
 // CommonConfig
 type CommonConfig struct {
-	ProENV   *bool
-	GoPATH   string
-	LogPATH  string `yaml:"logPath"`
-	HTTPPort string `yaml:"httpPort"`
+	ProENV  *bool
+	GoPATH  string
+	LogPATH string `yaml:"logPath"`
+	TcpPort string `yaml:"tcpPort"`
 }
 
 // Conf config 实例
