@@ -1,6 +1,13 @@
 package types
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+)
+
+const (
+	TcpDelim = '\n'
+)
 
 type StandardResp struct {
 	Code ErrCode `json:"code"`
@@ -23,5 +30,5 @@ func (s StandardResp) ToByte() []byte {
 
 	b, _ = json.Marshal(s)
 
-	return []byte(string(b) + "\n")
+	return append(b, TcpDelim)
 }

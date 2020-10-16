@@ -47,7 +47,7 @@ func tcpPipe(c *net.TCPConn) {
 			err    error
 			reqObj = &types.TcpReq{}
 		)
-		if req, err = reader.ReadString('\n'); err != nil || err == io.EOF {
+		if req, err = reader.ReadString(types.TcpDelim); err != nil || err == io.EOF {
 			break
 		}
 
